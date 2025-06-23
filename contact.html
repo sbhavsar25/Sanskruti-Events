@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - Sanskruti Events</title>
+
+  <!-- ✅ Use Poppins font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #0f1016;
+      color: #fff;
+    }
+
+    header, footer {
+      background-color: #0f1016;
+      text-align: center;
+      padding: 20px;
+      color: #ffcb85;
+    }
+
+    header img {
+      display: block;
+      margin: 0 auto 10px;
+      max-height: 140px;
+      width: auto;
+    }
+
+    header p {
+      color: #ffcb85;
+      margin-top: 10px;
+      font-weight: 500;
+    }
+
+    nav {
+      background: #1a1a1a;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    nav.show {
+      display: flex;
+    }
+
+    nav a {
+      color: #ffcb85;
+      padding: 15px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      background-color: #2a2a2a;
+    }
+
+    .menu-toggle {
+      display: block;
+      background: #1a1a1a;
+      color: #ffcb85;
+      border: none;
+      padding: 15px;
+      font-size: 18px;
+      cursor: pointer;
+      width: 100%;
+      text-align: left;
+    }
+
+    section {
+      max-width: 800px;
+      margin: auto;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    h2 {
+      color: #ffcb85;
+      font-size: 2rem;
+      font-weight: 600;
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    form button {
+      background-color: #ffcb85;
+      color: #0f1016;
+      padding: 12px 25px;
+      border: none;
+      font-weight: 600;
+      font-size: 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background-color: #e6b770;
+    }
+
+    .contact-info {
+      margin-top: 40px;
+      color: #ccc;
+      font-size: 1rem;
+    }
+
+    .contact-info p {
+      margin: 5px 0;
+    }
+
+    footer {
+      background-color: #0f1016;
+      color: #ffcb85;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+    }
+
+    @media (min-width: 769px) {
+      nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .menu-toggle {
+        display: none;
+      }
+    }
+    .site-footer {
+  background-color: #0f1016;
+  color: #ffcb85;
+  padding: 40px 20px 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-column {
+  flex: 1 1 300px;
+}
+
+.footer-logo {
+  max-width: 210px;
+  margin-bottom: 8 px;
+  margin-top: 50px;
+  margin-right: 25px;
+}
+
+.footer-column h4 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #ffcb85;
+}
+
+.footer-column p {
+  font-size: 0.95rem;
+  color: #ccc;
+  margin: 5px 0;
+}
+
+.social-icons a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #ffcb85;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 0.9rem;
+  border-top: 1px solid #2a2a2a;
+  padding-top: 15px;
+  color: #888;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-column {
+    flex: 1 1 100%;
+  }
+
+  .footer-logo {
+    margin: auto;
+  }
+}
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="images/logo.png" alt="Sanskruti Events Logo" class="site-logo" />
+    <p>Supply & Services !</p>
+  </header>
+
+  <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
+  <nav id="navbar">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="testimonials.html">Testimonials</a>
+    <a href="quote.html">Quote</a>
+    <a href="snlgs.html">Sustainable natural living green solutions</a>
+  </nav>
+
+  <section>
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <div class="contact-info">
+      <p>Email: contact@sanskrutievents.com</p>
+      <p>Phone: +91-98765-43210</p>
+      <p>Location: Ahmedabad, Gujarat, India</p>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-column logo-column">
+      <img src="images/logo.png" alt="Sanskruti Events Logo" class="footer-logo" />
+    </div>
+
+    <div class="footer-column about-column">
+      <h4>About Us</h4>
+      <p>Sanskruti Events is a full-service event management company based in Ahmedabad, specializing in lights, sound, decor, and holistic celebrations with a focus on culture and sustainability.</p>
+    </div>
+
+    <div class="footer-column contact-column">
+      <h4>Contact Us</h4>
+      <p><strong>Mobile:</strong> +91-98765-43210</p>
+      <p><strong>Email:</strong> contact@sanskrutievents.com</p>
+      <div class="social-icons">
+  <a href="https://www.instagram.com/sanskruti_events_official" target="_blank" aria-label="Instagram">
+    <i class="fab fa-instagram"></i> @sanskruti_events_official
+  </a>
+</div>
+
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2025 Sanskruti Events. All rights reserved.
+  </div>
+</footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('navbar');
+      nav.classList.toggle('show');
+    }
+  </script>
+
+</body>
+</html>

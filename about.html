@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About - Sanskruti Events</title>
+
+  <!-- ✅ Use Poppins font only -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #0f1016;
+      color: #fff;
+    }
+
+    header {
+      background-color: #0f1016;
+      text-align: center;
+      padding: 20px;
+    }
+
+    header img {
+      display: block;
+      margin: 0 auto 10px;
+      max-height: 140px;
+      width: auto;
+    }
+
+    header p {
+      color: #ffcb85;
+      margin-top: 10px;
+      font-weight: 500;
+    }
+
+    nav {
+      background: #1a1a1a;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    nav.show {
+      display: flex;
+    }
+
+    nav a {
+      color: #ffcb85;
+      padding: 15px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      background-color: #2a2a2a;
+    }
+
+    .menu-toggle {
+      display: block;
+      background: #1a1a1a;
+      color: #ffcb85;
+      border: none;
+      padding: 15px;
+      font-size: 18px;
+      cursor: pointer;
+      width: 100%;
+      text-align: left;
+    }
+
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    h2 {
+      color: #ffcb85;
+      font-size: 2rem;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 1rem;
+      font-weight: 400;
+      color: #ccc;
+    }
+
+    .process-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 50px;
+}
+
+.process-step {
+  background-color: #1a1a1a;
+  border-left: 4px solid #ffcb85;
+  padding: 20px;
+  border-radius: 8px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.6s ease forwards;
+  animation-delay: calc(var(--i) * 0.2s);
+}
+
+.process-step h3 {
+  margin: 0 0 10px;
+  font-size: 1.2rem;
+  color: #ffcb85;
+}
+
+.process-step p {
+  color: #ccc;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+ .site-footer {
+  background-color: #0f1016;
+  color: #ffcb85;
+  padding: 40px 20px 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-column {
+  flex: 1 1 300px;
+}
+
+.footer-logo {
+  max-width: 210px;
+  margin-bottom: 8 px;
+  margin-top: 50px;
+  margin-right: 25px;
+}
+
+.footer-column h4 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #ffcb85;
+}
+
+.footer-column p {
+  font-size: 0.95rem;
+  color: #ccc;
+  margin: 5px 0;
+}
+
+.social-icons a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #ffcb85;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 0.9rem;
+  border-top: 1px solid #2a2a2a;
+  padding-top: 15px;
+  color: #888;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-column {
+    flex: 1 1 100%;
+  }
+
+  .footer-logo {
+    margin: auto;
+  }
+}
+
+    @media (min-width: 769px) {
+      nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .menu-toggle {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="images/logo.png" alt="Sanskruti Events Logo" class="site-logo" />
+    <p>Supply & Services !</p>
+  </header>
+
+  <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
+  <nav id="navbar">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="testimonials.html">Testimonials</a>
+    <a href="contact.html">Contact</a>
+    <a href="quote.html">Quote</a>
+    <a href="snlgs.html">Sustainable natural living green solutions</a>
+  </nav>
+
+  <section>
+    <h2>About Us</h2>
+    <p>Sanskruti Events is a premier event management company based in Ahmedabad, offering professional services in sound, lights, and decoration for all types of events. We bring creativity, elegance, and organization to your special occasions.</p>
+ 
+    <h2>Our Event Management Process</h2>
+<div class="process-container">
+  <div class="process-step" style="--i:1"><h3>1. Client Briefing</h3><p>Understanding goals, audience, and expectations.</p></div>
+  <div class="process-step" style="--i:2"><h3>2. Concept & Planning</h3><p>Planning themes, budgets, schedules, and logistics.</p></div>
+  <div class="process-step" style="--i:3"><h3>3. Design & Proposal</h3><p>Crafting visuals, walkthroughs, and layout blueprints.</p></div>
+  <div class="process-step" style="--i:4"><h3>4. Execution & Setup</h3><p>Assembling decor, sound, lights, and venue arrangements.</p></div>
+  <div class="process-step" style="--i:5"><h3>5. Event Day Management</h3><p>Real-time coordination ensuring flawless delivery.</p></div>
+  <div class="process-step" style="--i:6"><h3>6. Feedback & Wrap-up</h3><p>Closing notes, feedback, and post-event analysis.</p></div>
+</div>
+
+
+</section>
+
+ <footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-column logo-column">
+      <img src="images/logo.png" alt="Sanskruti Events Logo" class="footer-logo" />
+    </div>
+
+    <div class="footer-column about-column">
+      <h4>About Us</h4>
+      <p>Sanskruti Events is a full-service event management company based in Ahmedabad, specializing in lights, sound, decor, and holistic celebrations with a focus on culture and sustainability.</p>
+    </div>
+
+    <div class="footer-column contact-column">
+      <h4>Contact Us</h4>
+      <p><strong>Mobile:</strong> +91-98765-43210</p>
+      <p><strong>Email:</strong> contact@sanskrutievents.com</p>
+      <div class="social-icons">
+  <a href="https://www.instagram.com/sanskruti_events_official" target="_blank" aria-label="Instagram">
+    <i class="fab fa-instagram"></i> @sanskruti_events_official
+  </a>
+</div>
+
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2025 Sanskruti Events. All rights reserved.
+  </div>
+</footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('navbar');
+      nav.classList.toggle('show');
+    }
+  </script>
+
+  <script>
+  // Animate process steps on scroll into view
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
+    });
+  }, { threshold: 0.3 });
+
+  document.querySelectorAll('.process-step').forEach(step => {
+    observer.observe(step);
+  });
+</script>
+
+</body>
+</html>

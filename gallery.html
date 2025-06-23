@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery - Sanskruti Events</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #0f1016;
+      color: #fff;
+    }
+
+    header, footer {
+      background-color: #0f1016;
+      text-align: center;
+      padding: 20px;
+      color: #ffcb85;
+    }
+
+    header img {
+      display: block;
+      margin: 0 auto 10px;
+      max-height: 140px;
+      width: auto;
+    }
+
+    nav {
+      background: #1a1a1a;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    nav.show {
+      display: flex;
+    }
+
+    nav a {
+      color: #ffcb85;
+      padding: 15px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      background-color: #2a2a2a;
+    }
+
+    .menu-toggle {
+      display: block;
+      background: #1a1a1a;
+      color: #ffcb85;
+      border: none;
+      padding: 15px;
+      font-size: 18px;
+      cursor: pointer;
+      width: 100%;
+      text-align: left;
+    }
+
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+
+    h2 {
+      color: #ffcb85;
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
+    h3 {
+      color: #ffcb85;
+      margin-top: 50px;
+      font-size: 1.5rem;
+      text-align: left;
+    }
+
+    .gallery-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .gallery-grid img {
+      max-width: 300px;
+      width: 100%;
+      border: 2px solid #ffcb85;
+      border-radius: 8px;
+    }
+
+    footer {
+      background-color: #0f1016;
+      color: #ffcb85;
+      text-align: center;
+      padding: 20px;
+    }
+
+    @media (min-width: 769px) {
+      nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .menu-toggle {
+        display: none;
+      }
+
+      .event-gallery {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.event-gallery h2 {
+  color: #ffcb85;
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 10px;
+  border: 2px solid #ffcb85;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.gallery-grid video {
+  max-width: 300px;
+  width: 100%;
+  border: 2px solid #ffcb85;
+  border-radius: 8px;
+  object-fit: cover;
+  background-color: #000;
+}
+
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+    }
+    .site-footer {
+  background-color: #0f1016;
+  color: #ffcb85;
+  padding: 40px 20px 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-column {
+  flex: 1 1 300px;
+}
+
+.footer-logo {
+  max-width: 210px;
+  margin-bottom: 8 px;
+  margin-top: 50px;
+  margin-right: 25px;
+}
+
+.footer-column h4 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #ffcb85;
+}
+
+.footer-column p {
+  font-size: 0.95rem;
+  color: #ccc;
+  margin: 5px 0;
+}
+
+.social-icons a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #ffcb85;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 0.9rem;
+  border-top: 1px solid #2a2a2a;
+  padding-top: 15px;
+  color: #888;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-column {
+    flex: 1 1 100%;
+  }
+
+  .footer-logo {
+    margin: auto;
+  }
+}
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="images/logo.png" alt="Sanskruti Events Logo" class="site-logo" />
+    <p>Supply & Services !</p>
+  </header>
+
+  <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
+  <nav id="navbar">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="testimonials.html">Testimonials</a>
+    <a href="contact.html">Contact</a>
+    <a href="quote.html">Quote</a>
+    <a href="snlgs.html">Sustainable natural living green solutions</a>
+  </nav>
+
+  <section>
+  <h2>Event Gallery</h2>
+
+  <h3>1. Stage Setups</h3>
+  <div class="gallery-grid">
+    <img src="images/stage1.jpg" alt="Stage Setup 1">
+    <img src="images/stage2.jpg" alt="Stage Setup 2">
+    <img src="images/stage3.jpg" alt="Stage Setup 3">
+  </div>
+
+  <h3>2. Lighting Effects</h3>
+  <div class="gallery-grid">
+    <img src="images/light1.jpg" alt="Lighting 1">
+    <img src="images/light2.jpg" alt="Lighting 2">
+    <img src="images/light3.jpg" alt="Lighting 3">
+  </div>
+
+  <h3>3. Decorations</h3>
+  <div class="gallery-grid">
+    <img src="images/decor1.jpg" alt="Decoration 1">
+    <img src="images/decor2.jpg" alt="Decoration 2">
+    <img src="images/decor3.jpg" alt="Decoration 3">
+  </div>
+   <div class="gallery-grid">
+    <img src="images/decor4.jpg" alt="Decoration 4">
+    <img src="images/decor5.jpg" alt="Decoration 5">
+    <img src="images/decor6.jpg" alt="Decoration 6">
+  </div>
+
+  <h3>4. Corporate Events</h3>
+  <div class="gallery-grid">
+    <img src="images/corp1.jpg" alt="Corporate 1">
+    <img src="images/corp2.jpg" alt="Corporate 2">
+    <img src="images/corp3.jpg" alt="Corporate 3">
+
+  </div>
+
+  <h3>5. Public Gatherings</h3>
+<div class="gallery-grid">
+  <video controls>
+    <source src="videos/public1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <video controls>
+    <source src="videos/public2.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+</section>
+
+
+  <footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-column logo-column">
+      <img src="images/logo.png" alt="Sanskruti Events Logo" class="footer-logo" />
+    </div>
+
+    <div class="footer-column about-column">
+      <h4>About Us</h4>
+      <p>Sanskruti Events is a full-service event management company based in Ahmedabad, specializing in lights, sound, decor, and holistic celebrations with a focus on culture and sustainability.</p>
+    </div>
+
+    <div class="footer-column contact-column">
+      <h4>Contact Us</h4>
+      <p><strong>Mobile:</strong> +91-98765-43210</p>
+      <p><strong>Email:</strong> contact@sanskrutievents.com</p>
+      <div class="social-icons">
+  <a href="https://www.instagram.com/sanskruti_events_official" target="_blank" aria-label="Instagram">
+    <i class="fab fa-instagram"></i> @sanskruti_events_official
+  </a>
+</div>
+
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2025 Sanskruti Events. All rights reserved.
+  </div>
+</footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('navbar');
+      nav.classList.toggle('show');
+    }
+  </script>
+
+</body>
+</html>
